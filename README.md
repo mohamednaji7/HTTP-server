@@ -1,37 +1,38 @@
+# Build Your Own HTTP Server in Python
+
 [![progress-banner](https://backend.codecrafters.io/progress/http-server/0c6ebda1-b0ec-45a4-8ab1-a7258484ffa4)](https://app.codecrafters.io/users/codecrafters-bot?r=2qF)
 
-This is a starting point for Python solutions to the
-["Build Your Own HTTP server" Challenge](https://app.codecrafters.io/courses/http-server/overview).
+This project is a solution to the [Codecrafters HTTP Server Challenge](https://app.codecrafters.io/courses/http-server/overview), where you build a fully functional HTTP server from scratch in the programing language of your choice (this one is in Python). The challenge is designed to deepen your understanding of how HTTP servers work under the hood, focusing on real-world concepts like request parsing, routing, concurrency, and file handling.
 
-[HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) is the
-protocol that powers the web. In this challenge, you'll build a HTTP/1.1 server
-that is capable of serving multiple clients.
+## Project Journey
 
-Along the way you'll learn about TCP servers,
-[HTTP request syntax](https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html),
-and more.
+This repository tracks the step-by-step development of the HTTP server, as reflected in the commit history:
 
-**Note**: If you're viewing this repo on GitHub, head over to
-[codecrafters.io](https://codecrafters.io) to try the challenge.
+- **Gzip Compression**: Adds support for gzip-encoded responses.
+- **Connection Management**: Implements keep-alive and connection close based on headers.
+- **Refactoring**: Refactors server to use classes and routing for maintainability.
+- **Concurrent Requests**: Adds support for handling multiple connections simultaneously.
+- **Persistent connection**: Handle any subsequent requests on the same connection.
+- **File Serving**: Implements file serving and refactors response handling.
+- **POST/File Creation**: Adds support for file creation via POST and robust error handling.
+- **Path Handling**: Handles different HTTP paths.
+- **Basic HTTP Response**: Server responds with 200 OK.
+- **Project Initialization**: Initial setup and test scaffolding.
 
-# Passing the first stage
+## Usage
 
-The entry point for your HTTP server implementation is in `app/main.py`. Study
-and uncomment the relevant code, and push your changes to pass the first stage:
+1. **Python version:** Ensure you have `python (3.13)` installed locally
+2. **Run the server:**
+    ```sh
+    python app/main.py
+    ```
+3. **Test HTTP requests:**
+    Use `codecrafters test`, curl, Postman, or your browser to interact with the server.
 
-```sh
-git commit -am "pass 1st stage" # any msg
-git push origin master
-```
+## About Codecrafters
 
-Time to move on to the next stage!
+Codecrafters offers real-world proficiency challenges for developers. Learn more at [codecrafters.io](https://codecrafters.io).
 
-# Stage 2 & beyond
+---
 
-Note: This section is for stages 2 and beyond.
-
-1. Ensure you have `python (3.13)` installed locally
-1. Run `./your_program.sh` to run your program, which is implemented in
-   `app/main.py`.
-1. Commit your changes and run `git push origin master` to submit your solution
-   to CodeCrafters. Test output will be streamed to your terminal.
+_This project was created as part of the Codecrafters HTTP Server Challenge. For more details and to try the challenge yourself, visit [Codecrafters HTTP Server](https://app.codecrafters.io/courses/http-server/overview)._
